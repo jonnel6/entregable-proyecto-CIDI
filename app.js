@@ -14,13 +14,27 @@ document.getElementById('addTaskBtn').addEventListener('click', function() {
     let li = document.createElement('li');
     li.textContent = taskText;
 
-    // Agregar funcionalidad para marcar como completada
-    li.addEventListener('click', function() {
-      li.classList.toggle('completed');
+    // Crear el botón de eliminar
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Eliminar';
+    deleteBtn.classList.add('delete-btn');
+
+    // Agregar evento para eliminar la tarea
+    deleteBtn.addEventListener('click', function(e) {
+      e.stopPropagation(); // Evitar que el click también active el 'click' de completar
+      li.remove(); // Elimina la tarea
     });
+
+    // Agregar el botón de eliminar a la tarea
+    li.appendChild(deleteBtn);
 
     // Agregar la tarea a la lista
     taskList.appendChild(li);
+
+    // Agregar funcionalidad para marcar como completada - DESARROLLADOR 1
+    li.addEventListener('click', function() {
+      li.classList.toggle('completed'); // Alterna la clase 'completed'
+    });
 
     // Limpiar el input
     taskInput.value = '';
