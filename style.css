@@ -56,3 +56,18 @@ li.completed {
   text-decoration: line-through;
   background-color: #d3ffd3;
 }
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #e03e3e;
+}
+
