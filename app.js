@@ -12,6 +12,11 @@ document.getElementById('addTaskBtn').addEventListener('click', function() {
     // Agregar la tarea a la lista
     taskList.appendChild(li);
 
+    // Agregar funcionalidad para marcar como completada - DESARROLLADOR 1
+    li.addEventListener('click', function() {
+      li.classList.toggle('completed'); // Alterna la clase 'completed'
+    });
+
     // Limpiar el input
     taskInput.value = '';
   }

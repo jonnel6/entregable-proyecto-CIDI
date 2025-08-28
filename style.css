@@ -54,5 +54,5 @@ li {
 
 li.completed {
   text-decoration: line-through;
-  background-color: #d3ffd3;
+  background-color: #d3ffd3; /* Fondo verde claro */
 }
